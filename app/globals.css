@@ -53,6 +53,13 @@
 .RawGem{
   @apply bg-[url("/assets/fimages/rawgem.png")] bg-center bg-cover ;
 }
+
+/* All article background image */
+
+.aallbg{
+  @apply bg-[url("/assets/fimages/allarticleHero.png")] bg-center bg-cover ;
+
+}
 .cardTitle{
   @apply  text-2xl font-medium leading-8  ;
 
@@ -67,6 +74,25 @@
 .hoverAnimation:hover{
   transform: scale(1.1);
 }
+
+
+
+/* images vertical animation */
+
+.vertical-animation{
+  animation: slideVertical 2s linear infinite alternate; 
+}
+
+@keyframes slideVertical {
+  0% {
+      top: 0; /* Start at the top */
+  }
+  100% {
+      top: 20px; /* Move to the bottom */
+  }
+}
+
+
 /* services section */
 
 .seviceRight {

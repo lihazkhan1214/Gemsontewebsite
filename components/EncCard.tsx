@@ -11,10 +11,10 @@ function EncCard() {
 
                     <Image src="/assets/dami/card1.png" alt='not found' fill />
                 </div>
-                <div className="bg-[#F4F6FF] p-3 ">
+                <div className="bg-[#F4F6FF] p-3 mt-5 ">
                     <h1 className="cardTitle text-[#000]">Amethy - february</h1>
 
-                    <p className="text-[14px] text-[#111111] font-normal text-justify mt-3 leading-7">chemical composition, resulting in a variety of…
+                    <p className="text-[14px] text-[#111111] font-normal text-justify mt-5 leading-7">chemical composition, resulting in a variety of…
                        </p>
                 </div>
 
