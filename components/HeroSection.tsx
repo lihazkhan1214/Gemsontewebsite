@@ -19,7 +19,7 @@ export function HeroSection() {
      <h1  className="block md:hidden relative text-white flex text-7xl font-semibold leading-[90px] w-[772px] max-w-full ml-4 md:ml-12 mt-14 max-md:text-4xl max-md:leading-[54px] max-md:mt-10"> Discover the World of  Gemstones</h1>
 
       <div className="relative text-white text-2xl leading-9 w-[578px] max-w-full ml-4 md:ml-12 mt-11 max-md:mt-10">
-        Unveiling Earth's Treasures: Explore the Radiance of Gemstones - Your
+        Unveiling Earths Treasures Explore the Radiance of Gemstones  Your
         Ultimate Guide to the World of Precious and Semi-Precious Gems
       </div>{" "}
       <div className="relative text-white text-2xl font-medium leading-[54.72px] whitespace-nowrap justify-center items-stretch bg-violet-800 ml-12 mt-20 mb-48 px-12 py-2 rounded-lg max-md:ml-2.5 max-md:my-10 max-md:px-5">

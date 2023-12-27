@@ -15,9 +15,10 @@ function AllBstoneHero() {
             
             <h1 className="text-white text-center text-6xl font-medium leading-[75px] ">Birth Gemstones</h1>
        
-          <p className="text-white text-center text-2xl leading-9 self-stretch mt-12 max-md:max-w-full max-md:mt-10">
-          Birthstones, also known as birth gems, are precious or semi-precious stones associated with each month of the year, believed to bring good luck and align with the wearer's astrological sign.
-          </p>
+            <p className="text-white text-center text-2xl leading-9 self-stretch mt-12 max-md:max-w-full max-md:mt-10">
+  Birthstones, also known as birth gems, are precious or semi-precious stones associated with each month of the year, believed to bring good luck and align with the wearer&apos;s astrological sign.
+</p>
+
         </div>
       </div>
     </div>

@@ -15,7 +15,8 @@ function Footer() {
               <Image src="/assets/fimages/logo.png" alt="not found" fill />
             </Link>
           </div>
-          <p className="text-[#000000] mt-5 font-normal text-[14px] ">Unveiling Earth's Treasures: Explore the Radiance of Gemstones - Your Ultimate Guide to the World of Precious and Semi-Precious Gems</p>
+          <p className="text-[#000000] mt-5 font-normal text-[14px] ">Unveiling Earth&apos;s Treasures: Explore the Radiance of Gemstones Your Ultimate Guide to the World of Precious and Semi-Precious Gems</p>
+
           <div className="flex gap-5 mt-5">
             <div className="relative w-[33px] h-[33px]">
               <Link href="/" >

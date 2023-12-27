@@ -10,8 +10,8 @@ export function Rawgemcard() {
               Ruby
             </h1>
             <p className="text-slate-600 text-justify text-lg leading-7 mt-5 max-md:max-w-full max-md:mt-10">
-              Immerse yourself in the allure of Sri Lanka's gemstone treasure
-              trove, where the island's fertile soil reveals a spectrum of
+              Immerse yourself in the allure of Sri Lankas gemstone treasure
+              trove, where the islands fertile soil reveals a spectrum of
               vibrant sapphires, including the famed Ceylon blue. Renowned for
               centuries, these ethereal gems reflect the rich history and
               geological splendor that make Sri Lanka a gemstone paradise.
