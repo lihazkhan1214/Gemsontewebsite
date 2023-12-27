@@ -11,8 +11,9 @@ export function RawGemston() {
         <h1 className='global__title  text-[#FFF]'>Raw Gemstones</h1>
 
         <p className='text-white text-[22px] mt-5 leading-8 md:w-[80%] text-justify'>
-  Embark on a global gemstone odyssey, from Sri Lanka's dazzling sapphires to Colombia's lush emeralds, exploring the countries with the richest variety of precious stones.
+  Embark on a global gemstone odyssey, from Sri Lanka&apos;s dazzling sapphires to Colombia&apos;s lush emeralds, exploring the countries with the richest variety of precious stones.
 </p>
+
 
         <Rawgemcard />
         <Rawgemcard />
