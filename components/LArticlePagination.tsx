@@ -65,7 +65,7 @@ function LArticlePagination() {
                 </div>
 
                 {/* Pagination */}
-                <div className="flex justify-end items-center gap-2 mt-5">
+                <div className="flex  justify-end flex-wrap items-center gap-2 mt-5">
                     <button
                         className={`text-[#878A99] text-[13px] border-[1px] border-[#CED4DA] cursor-pointer px-3 py-2 rounded-md font-normal ${currentPage === 1 ? 'border-[#6B03C1]' : ''
                             }`}
@@ -76,7 +76,7 @@ function LArticlePagination() {
                     </button>
                     {Array.from({ length: totalPages }, (_, index) => (
                         <button
-                            className={`text-[#878A99] text-[13px] w-[40px] h-[40px] cursor-pointer p-2 rounded-md font-normal ${currentPage === index + 1
+                            className={`text-[#878A99]  text-[13px] w-[40px] h-[40px] cursor-pointer p-2 rounded-md font-normal ${currentPage === index + 1
                                     ? 'border border-[#6B03C1]'
                                     : 'border border-[#CED4DA]'
                                 }`}

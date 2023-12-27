@@ -19,8 +19,11 @@ function AllBstonesSlider() {
         onClick,
     }) => {
         return (
-            <div className={className} style={{ ...style }}>
-                {/* <Image src="/assets/fimages/nexticon.png" alt='not found' width={100} height={100} onClick={onClick} /> */}
+            <div className={className} style={{ ...style }} onClick={onClick}>
+                <div className="relative  hidden md:block w-[30px]  h-[30px]">
+                    <Image src="/assets/fimages/nexticon.png" alt='not found' fill />
+                </div>
+
             </div>
         );
     };
@@ -31,8 +34,10 @@ function AllBstonesSlider() {
         onClick,
     }) => {
         return (
-            <div className={className} style={{ ...style }}>
-                {/* <Image src="/assets/fimages/previcon.png" alt='not found' width={50} height={50} onClick={onClick} /> */}
+            <div className={className} style={{ ...style }} onClick={onClick}>
+                <div className="relative hidden md:block w-[30px]  h-[30px]">
+                    <Image src="/assets/fimages/previcon.png" alt='not found' fill />
+                </div>
             </div>
         );
     };

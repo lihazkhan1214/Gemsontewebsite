@@ -17,9 +17,14 @@ const Navbar = () => {
     }
   };
 
+  // Function to close the dropdown
+  const closeDropdown = () => {
+    setOpenDropdown(null);
+  };
+
   return (
-    <nav className="bg-[#FFF] h-[80px] padding-x py-2">
-      <div className="mx-auto flex justify-between items-center">
+    <nav className="bg-[#FFF] mx-auto flex justify-between items-center h-[80px] padding-x py-2">
+    
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" passHref>
@@ -29,7 +34,7 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-12 items-center">
-          <Link href="/about" passHref>
+          <Link href="/" passHref>
             <span className='text-[#000] text-[18px] hover:text-[#C986FF] font-[400] cursor-pointer'>Home</span>
           </Link>
 
@@ -47,7 +52,10 @@ const Navbar = () => {
                   {dropdownLinksData[key].map((link, linkIndex) => (
                     <React.Fragment key={linkIndex}>
                       <Link href={link.href} passHref>
-                        <span className="block text-center py-2 text-nowrap text-[12px] text-[#605e5e] hover:text-[#C986FF] cursor-pointer">
+                        <span 
+                          onClick={closeDropdown}
+                          className="block text-center py-2 text-nowrap text-[12px] text-[#605e5e] hover:text-[#C986FF] cursor-pointer"
+                        >
                           {link.name}
                         </span>
                       </Link>
@@ -61,19 +69,20 @@ const Navbar = () => {
             </div>
           ))}
 
-          <Link href="/birthstones" passHref>
+          <Link href="/allbirthstones" passHref>
             <span className='text-[#000] text-[18px] hover:text-[#C986FF] font-[400] cursor-pointer'>Birthstones</span>
           </Link>
         </div>
 
         {/* Login and Register Buttons */}
-        <div className="">
-         
+        <div className="hidden md:block">
           <button className='bg-[#6B03C1] text-[18px] font-[500] rounded-[4px] w-[120px] text-[#FFF] h-[48px]'>
             Register
           </button>
         </div>
-      </div>
+
+        
+     
     </nav>
   );
 };

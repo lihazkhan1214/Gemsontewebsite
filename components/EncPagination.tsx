@@ -43,7 +43,7 @@ function Page() {
                     <input
                         type=""
                         className="w-[70%] outline-none h-[80%] text-black text-lg leading-8 grow whitespace-nowrap self-start"
-                        placeholder=" Search for gems..."
+                        placeholder=" Search for  gems..."
                     />
                     <div className="aspect-square self-center relative object-contain object-center w-[29px] overflow-hidden shrink-0 max-w-full">
                         <Image src="/assets/fimages/filter.png" alt="not found" fill />
@@ -60,7 +60,7 @@ function Page() {
                 </div>
 
                 {/* Pagination */}
-                <div className="flex justify-end items-center gap-2 mt-5">
+                <div className="flex justify-end flex-wrap items-center gap-2 mt-5">
                     <button
                         className={`text-[#878A99] text-[13px] border-[1px] border-[#CED4DA] cursor-pointer px-3 py-2 rounded-md font-normal ${
                             currentPage === 1 ? 'border-[#6B03C1]' : ''

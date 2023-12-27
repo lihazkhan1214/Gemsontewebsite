@@ -9,7 +9,7 @@ function AllGemHero() {
       
       <Image src="/assets/fimages/allgemstonehero.png" alt="not found" fill/>
       </div>
-      <div className="relative backdrop-blur-[7.5px] bg-stone-800 bg-opacity-40 flex w-full flex-col justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5">
+      <div className="relative backdrop-blur-[7.5px]  bg-opacity-40 flex w-full flex-col justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5">
         <div className="flex w-[636px] max-w-full flex-col items-center mt-16 mb-28 max-md:my-10">
           <div className="text-white text-center text-6xl font-medium leading-[75px] max-w-[345px] max-md:text-4xl max-md:leading-[54px]">
             

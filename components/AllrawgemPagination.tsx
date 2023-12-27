@@ -58,7 +58,7 @@ function AllrawgemPagination() {
                 ))}
 
                 {/* Pagination */}
-                <div className="flex justify-end items-center gap-2 mt-5">
+                <div className="flex flex-wrap justify-end items-center gap-2 mt-5">
                     <button
                         className={`text-[#878A99] text-[13px] border-[1px] border-[#CED4DA] cursor-pointer px-3 py-2 rounded-md font-normal ${
                             currentPage === 1 ? 'border-[#6B03C1]' : ''

@@ -66,13 +66,15 @@
 }
 
 /* hove animation for cars */
-.hoverAnimation{
+ .hoverAnimation{
   transition: transform 0.3s ease;
 }
 
 
 .hoverAnimation:hover{
   transform: scale(1.1);
+  /* box-decoration-break: 2px 2px rgb(186, 183, 183); */
+  /* background-color: #c4c4c7; */
 }
 
 
@@ -91,6 +93,17 @@
       top: 20px; /* Move to the bottom */
   }
 }
+
+
+
+/* slider */
+
+.slick-prev:before, .slick-next:before {
+  display: none;
+}
+
+
+
 
 
 /* services section */

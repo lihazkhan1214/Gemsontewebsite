@@ -19,8 +19,11 @@ function LArticleSlider() {
         onClick,
     }) => {
         return (
-            <div className={className} style={{ ...style }}>
-                {/* <Image src="/assets/fimages/nexticon.png" alt='not found' width={100} height={100} onClick={onClick} /> */}
+            <div className={className} style={{ ...style }} onClick={onClick}>
+                <div className="relative  hidden md:block w-[30px]  h-[30px]">
+                    <Image src="/assets/fimages/nexticon.png" alt='not found' fill />
+                </div>
+
             </div>
         );
     };
@@ -31,8 +34,10 @@ function LArticleSlider() {
         onClick,
     }) => {
         return (
-            <div className={className} style={{ ...style }}>
-                {/* <Image src="/assets/fimages/previcon.png" alt='not found' width={50} height={50} onClick={onClick} /> */}
+            <div className={className} style={{ ...style }} onClick={onClick}>
+                <div className="relative hidden md:block w-[30px]  h-[30px]">
+                    <Image src="/assets/fimages/previcon.png" alt='not found' fill />
+                </div>
             </div>
         );
     };
@@ -96,7 +101,7 @@ function LArticleSlider() {
 
     return (
         <>
-            <div className="padding-x py-12 mt-10 bg-[#F5F5F5]">
+            <div className="max-sm:px-5 padding-x py-12 mt-10 bg-[#F5F5F5]">
                 <div className="flex flex-col mb-10 gap-3 items-center sm:flex-row">
                     <div className="relative w-[40px] h-[40px]">
                         <Image src="/assets/fimages/icon1.png" alt="not found" fill />
@@ -107,19 +112,19 @@ function LArticleSlider() {
                 </div>
 
                 <Slider {...settings}>
-                    <div className="px-2 sm:px-3">
+                    <div className=" sm:px-3">
                         <LArticleCard />
                     </div>
-                    <div className="px-2 sm:px-3">
+                    <div className=" sm:px-3">
                         <LArticleCard />
                     </div>
-                    <div className="px-2 sm:px-3">
+                    <div className=" sm:px-3">
                         <LArticleCard />
                     </div>
-                    <div className="px-2 sm:px-3">
+                    <div className=" sm:px-3">
                         <LArticleCard />
                     </div>
-                    <div className="px-2 sm:px-3">
+                    <div className=" sm:px-3">
                         <LArticleCard />
                     </div>
                 </Slider>
