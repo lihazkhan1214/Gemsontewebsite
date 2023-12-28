@@ -26,7 +26,7 @@ function EncAbout() {
       };
 
     const settings = {
-        dots: true,
+        dots:false,
         infinite: true,
         speed: 500,
     
@@ -35,7 +35,7 @@ function EncAbout() {
         initialSlide: 0,
         swipeToSlide: true,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SampleNextArrow />,
         responsive: [
