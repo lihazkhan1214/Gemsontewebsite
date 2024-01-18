@@ -1,9 +1,29 @@
 
 "use client"
 import Image from "next/image";
+
+import { useState,useEffect } from "react";
 import { Textanimation } from "./Textanimaiton";
+import { Posts } from "@/services/index";
+// import Banner from "@/app/components/Banner";
+
+
 
 export function HeroSection() {
+
+  const [data, setData] = useState([{}]);
+
+  useEffect(() => {
+    getBannerData();
+  }, []);
+
+  const getBannerData = async () => {
+    const res = await Posts();
+    console.log("res",res)
+    setData(res);
+    return;
+  };
+  console.log("data",data)
   return (<>
     <div className="flex-col overflow-hidden relative flex min-h-[854px] px-2 md:padding-x  py-12 items-start max-md:px-5">
 

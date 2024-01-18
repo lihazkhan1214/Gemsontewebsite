@@ -238,18 +238,18 @@ body {
 
 
 /* Vertical scrollbar */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #af2245;
+  background-color: #6B03C1;
   border-radius: 50px;
 }
 
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
-} */
+}
 
 
 
@@ -259,7 +259,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-  background-color: #af2245;
+  background-color: #6B03C1 ;
   border-radius: 50px;
 }
 

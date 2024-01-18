@@ -15,3 +15,5 @@ export const dropdownLinksData: DropdownLinks = {
 
  
 };
+
+export const api_endpoint ="https://api-ap-south-1.hygraph.com/v2/clri0xf871n4z01w9qmfilc4s/master";
