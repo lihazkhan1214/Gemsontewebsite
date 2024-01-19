@@ -7,6 +7,8 @@ export const Posts = async () => {
   const query = gql`
   query Posts {
     posts {
+    authorbio
+     authorname
       title
       updatedAt
       publishedAt
@@ -17,20 +19,11 @@ export const Posts = async () => {
       }
       birthSones
       tableOfContent {
-        html
+      
         json
       }
     }
-    authorsConnection {
-      edges {
-        cursor
-        node {
-          bio
-          id
-          name
-        }
-      }
-    }
+    
    
   }
   `;

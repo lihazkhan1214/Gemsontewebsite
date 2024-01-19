@@ -16,4 +16,51 @@ export const dropdownLinksData: DropdownLinks = {
  
 };
 
+
+
+
+// dataTypes.ts
+interface Picture {
+  url: string;
+}
+
+interface TableOfContent {
+  json: {
+    children: Array<{
+      type: string;
+      children?: Array<{
+        text: string;
+      }>;
+      src?: string;
+      title?: string;
+      width?: number;
+      handle?: string;
+      height?: number;
+      mimeType?: string;
+    }>;
+  };
+}
+
+interface PostData {
+  authorbio: string;
+  authorname: string;
+  title: string;
+  updatedAt: string;
+  publishedAt: string;
+  slug: string;
+  shortDescription: string;
+  pictures: Picture[];
+  birthSones: string;
+  tableOfContent: TableOfContent;
+}
+
+export default PostData;
+
+
+
+
+
+
+
+
 export const api_endpoint ="https://api-ap-south-1.hygraph.com/v2/clri0xf871n4z01w9qmfilc4s/master";
