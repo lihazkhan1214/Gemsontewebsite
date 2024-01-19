@@ -48,3 +48,35 @@ export const Posts = async () => {
 
 
 
+
+
+// export const getSingleBlog = async (slug: string) => {
+//   const query = gql`
+//     query getSingleBlog($slug: String!) {
+//       bloglist(where: { slug: $slug }) {
+//         authorbio
+//         authorname
+//          title
+//          updatedAt
+//          publishedAt
+//          slug
+//          shortDescription
+//          pictures {
+//            url
+//          }
+//          birthSones
+//          tableOfContent {
+         
+//            json
+//          }
+//       }
+//     }
+//   `;
+
+//   const slugName = {
+//     slug,
+//   };
+
+//   const response = await graphQLClient.request(query, slugName);
+//   return response;
+// };
