@@ -7,21 +7,18 @@ export const Posts = async () => {
   const query = gql`
   query Posts {
     posts {
-    authorbio
-     authorname
+    
       title
-      updatedAt
-      publishedAt
+    
       slug
       shortDescription
-      pictures {
+      polishedImg {
         url
       }
       birthSones
-      tableOfContent {
-      
-        json
-      }
+      birthDescription
+      category
+     
     }
     
    
@@ -50,33 +47,93 @@ export const Posts = async () => {
 
 
 
-// export const getSingleBlog = async (slug: string) => {
-//   const query = gql`
-//     query getSingleBlog($slug: String!) {
-//       bloglist(where: { slug: $slug }) {
-//         authorbio
-//         authorname
-//          title
-//          updatedAt
-//          publishedAt
-//          slug
-//          shortDescription
-//          pictures {
-//            url
-//          }
-//          birthSones
-//          tableOfContent {
-         
-//            json
-//          }
-//       }
-//     }
-//   `;
 
-//   const slugName = {
-//     slug,
-//   };
 
-//   const response = await graphQLClient.request(query, slugName);
-//   return response;
-// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const getSingleBlog = async (slug: string) => {
+  const query = gql`
+    query SignlePost($slug: String!) {
+      post(where: { slug: $slug }) {
+        authorname
+        authorbio
+        birthSones
+        category
+        jewelry {
+          url
+        }
+        rough {
+          url
+        }
+        polishedImg {
+          url
+        }
+        publishedAt
+        updatedAt
+        title
+        tableOfContent {
+          json
+        }
+        createdBy {
+          name
+        }
+      }
+    }
+  `;
+
+  const variables = {
+    slug,
+  };
+
+  const response = await graphQLClient.request(query, variables);
+  return response;
+};
+
+
+
+
+
+export const getBlogcategories = async ({ slug }: { slug: string[] }) => {
+  const query = gql`
+    query CategoryPosts($slug: [String!]!) {
+      posts(where: { category_in: $slug }) {
+        title
+        slug
+        shortDescription
+        polishedImg {
+          url
+        }
+        birthSones
+        birthDescription
+        category
+      }
+    }
+  `;
+
+  const variables = {
+    slug,
+  };
+
+  const response = await graphQLClient.request(query, variables);
+  return response;
+};
+
+

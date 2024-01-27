@@ -2,9 +2,11 @@
 const nextConfig = {
 
     images: {
-        domains: ["res.cloudinary.com","uploadthing.com",'media.istockphoto.com'],
+        domains: ["res.cloudinary.com","uploadthing.com",'media.istockphoto.com','media.graphassets.com'],
       
       },
+
+    
     
 }
 

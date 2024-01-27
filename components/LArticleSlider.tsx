@@ -5,6 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import LArticleCard from './LArticleCard';
 import Image from 'next/image';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { RootState } from '@/redux/store';
+import PostData from '@/constants';
 
 interface SampleArrowProps {
     className?: string;
@@ -13,6 +17,13 @@ interface SampleArrowProps {
 }
 
 function LArticleSlider() {
+
+    const dispatch = useDispatch();
+    const postData = useSelector((state: RootState) => state.postData.data) as PostData[];
+
+
+
+
     const SampleNextArrow: React.FC<SampleArrowProps> = ({
         className,
         style,
@@ -101,34 +112,46 @@ function LArticleSlider() {
 
     return (
         <>
-            <div className="max-sm:px-5 padding-x py-12 mt-10 bg-[#F5F5F5]">
-                <div className="flex flex-col mb-10 gap-3 items-center sm:flex-row">
-                    <div className="relative w-[40px] h-[40px]">
-                        <Image src="/assets/fimages/icon1.png" alt="not found" fill />
-                    </div>
-                    <h1 className="text-black font-semibold text-2xl">
-                        Latest Gemstones Articles
-                    </h1>
-                </div>
+            {
+                postData && (
+                    <>
+                        <div className="max-sm:px-5 padding-x py-12 mt-10 bg-[#F5F5F5]">
+                            <div className="flex flex-col mb-10 gap-3 items-center sm:flex-row">
+                                <div className="relative w-[40px] h-[40px]">
+                                    <Image src="/assets/fimages/icon1.png" alt="not found" fill />
+                                </div>
+                                <h1 className="text-black font-semibold text-2xl">
+                                    Latest Gemstones Articles
+                                </h1>
+                            </div>
 
-                <Slider {...settings}>
-                    <div className=" sm:px-3">
-                        <LArticleCard />
-                    </div>
-                    <div className=" sm:px-3">
-                        <LArticleCard />
-                    </div>
-                    <div className=" sm:px-3">
-                        <LArticleCard />
-                    </div>
-                    <div className=" sm:px-3">
-                        <LArticleCard />
-                    </div>
-                    <div className=" sm:px-3">
-                        <LArticleCard />
-                    </div>
-                </Slider>
-            </div>
+                            <Slider {...settings}>
+
+
+
+
+                                {postData.map((item, index) => (
+                                    <>
+                                        <div className=" sm:px-3">
+                                            <LArticleCard
+                                                key={index}
+                                                title={item.title}
+                                                slug={item.slug}
+                                                category={item.category}
+                                                BirthDescription={item.birthDescription}
+                                                shortDescription={item.shortDescription}
+                                                picture={item.polishedImg.url}
+                                            />
+                                        </div> </>
+                                ))}
+
+                            </Slider>
+                        </div>
+
+                    </>
+                )
+            }
+
         </>
     );
 }

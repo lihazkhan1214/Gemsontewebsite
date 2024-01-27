@@ -46,12 +46,10 @@ function Footer() {
           <div className="grid gap-5 grid-cols-2 md:grid-cols-3">
 
             <Link className='block text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/">Home</Link>
-            <Link className='block text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/">Encyclopedia</Link>
-            <Link className='block text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/">About Us</Link>
-            <Link className='block text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/">Articles</Link>
-            <Link className='block  text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/">Raw Gemstones</Link>
-            <Link className='block text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/">Gemstones</Link>
-            <Link className='block text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/">BirthStones</Link>
+            <Link className='block text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/allencyclopedia">Encyclopedia</Link>
+            <Link className='block text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/allarticles">Articles</Link>
+            <Link className='block  text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/allrawgems">Raw Gemstones</Link>
+            <Link className='block text-[18px] font-normal text-[#000] hover:text-[#6B03C1]' href="/allbirthstones">BirthStones</Link>
 
 
 

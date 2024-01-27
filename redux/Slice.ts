@@ -1,31 +1,19 @@
-// slice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import PostData from "@/constants/index";
+import PostData from '@/constants/index';
 
 interface PostDataState {
-  data: PostData;
+  data: PostData[];
 }
 
 const initialState: PostDataState = {
-  data: {
-    authorbio: "",
-    authorname: "",
-    title: "",
-    updatedAt: "",
-    publishedAt: "",
-    slug: "",
-    shortDescription: "",
-    pictures: [],
-    birthSones: "",
-    tableOfContent: { json: { children: [] } },
-  },
+  data: [], // Change this to an array
 };
 
 const dataSlice = createSlice({
   name: 'data',
   initialState,
   reducers: {
-    setData: (state, action: PayloadAction<PostData>) => {
+    setData: (state, action: PayloadAction<PostData[]>) => {
       state.data = action.payload;
     },
   },

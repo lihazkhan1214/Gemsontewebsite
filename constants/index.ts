@@ -8,10 +8,8 @@ export interface DropdownLinks {
 }
 
 export const dropdownLinksData: DropdownLinks = {
-  encyclopedia: [{ name: 'Ruby', href: '/encyclopedia/ruby' }, { name: 'Sapphire', href: '/Sapphire' },{ name: 'Tanzanite', href: '/Tanzanite' },{ name: 'Diamond', href: '/Diamond' },{ name: 'Emerald', href: '/Emerald' },{ name: 'Opal', href: '/Opal' },{ name: 'Moissanite', href: '/Moissanite' },{ name: 'Peridot', href: '/Peridot' },{ name: 'All Encyclopedia', href: '/allencyclopedia' }],
-  articles: [{ name: 'Gemstones collecting', href: '/Gemstones collecting' }, { name: ' Gemstone Beauty', href: '/Gemstone Beauty' },{ name: 'Gemstone Color', href: '/Gemstone Color' }, { name: 'Gemstone Origins', href: '/Gemstone Origins ' },{ name: 'Optical Properties', href: '/Optical Properties' }, { name: 'Gemstone Luster', href: '/Gemstone Luster' },{ name: 'All Articles', href: '/allarticles' }],
-  stones:  [{ name: 'Ruby', href: '/Ruby' }, { name: 'Sapphire', href: '/Sapphire' },{ name: 'Tanzanite', href: '/Tanzanite' },{ name: 'Diamond', href: '/Diamond' },{ name: 'Emerald', href: '/Emerald' },{ name: 'Opal', href: '/Opal' },{ name: 'Moissanite', href: '/Moissanite' },{ name: 'Peridot', href: '/Peridot' },{ name: 'All Encyclopedia', href: '/allgemstones' }],
-  rawStones: [{ name: 'Raw Ruby', href: '/rawruby' }, { name: 'Raw Tanzanite', href: '/rawtanzanite' }, { name: 'Raw Diamond', href: '/rawdiamond' }, { name: 'Raw Emerald', href: '/rawemerald' }, { name: 'Raw Moissanite', href: '/rawmoissanite' }, { name: 'Raw Peridot', href: '/rawperidot' }, { name: 'All Raw Stones', href: '/allrawgems' }],
+  encyclopedia: [{ name: 'Ruby', href: '/encyclopedia/ruby' }, { name: 'Sapphire', href: '/encyclopedia/sapphire' },{ name: 'Tanzanite', href: '/encyclopedia/tanzanite' },{ name: 'Diamond', href: '/encyclopedia/diamond' },{ name: 'Emerald', href: '/encyclopedia/emerald' },{ name: 'Opal', href: '/encyclopedia/opal' },{ name: 'Moissanite', href: '/encyclopedia/moissanite' },{ name: 'Peridot', href: '/encyclopedia/peridot' },{ name: 'All Encyclopedia', href: '/allencyclopedia' }],
+  rawStones: [{ name: 'Raw Ruby', href: '/rawstones/rawruby' }, { name: 'Raw Tanzanite', href: '/rawstones/rawtanzanite' }, { name: 'Raw Diamond', href: '/rawstones/rawdiamond' }, { name: 'Raw Emerald', href: '/rawstones/rawemerald' }, { name: 'Raw Moissanite', href: '/rawstones/rawmoissanite' }, { name: 'Raw Peridot', href: '/rawstones/rawperidot' }, { name: 'All Raw Stones', href: '/allrawgems' }],
 
  
 };
@@ -20,11 +18,9 @@ export const dropdownLinksData: DropdownLinks = {
 
 
 // dataTypes.ts
-interface Picture {
-  url: string;
-}
 
-interface TableOfContent {
+
+export interface TableOfContent {
   json: {
     children: Array<{
       type: string;
@@ -41,7 +37,38 @@ interface TableOfContent {
   };
 }
 
+
+
+
+
+
+
+
+
+
 interface PostData {
+   title: string;
+  slug: string;
+  category:string;
+  shortDescription: string;
+  birthDescription:string;
+  birthSones:string;
+  
+  polishedImg: {
+    url:string
+  }
+  
+  
+ 
+}
+
+export default PostData;
+
+
+
+
+
+export interface SinglePostInterface {
   authorbio: string;
   authorname: string;
   title: string;
@@ -49,14 +76,33 @@ interface PostData {
   publishedAt: string;
   slug: string;
   shortDescription: string;
-  pictures: Picture[];
+  selectedImageType:string;
+  category:string;
+  createdBy: {
+    name:string;
+  };
+  polishedImg: {
+    url:string
+  }
+  rough: {
+    url:string
+  }
+  jewelry: {
+    url:string
+  }
   birthSones: string;
-  tableOfContent: TableOfContent;
+  tableOfContent:TableOfContent;
 }
 
-export default PostData;
 
-
+export interface LArticleCardProps {
+  title: string;
+  slug: string;
+  category: string;
+  shortDescription: string;
+  BirthDescription:string;
+  picture: string;
+}
 
 
 

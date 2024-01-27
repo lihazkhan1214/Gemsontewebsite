@@ -9,24 +9,41 @@ import { RootState } from '@/redux/store';
 import { Posts } from "@/services/index";
 import PostData from "@/constants";
 
+
 export function HeroSection() {
+
   const dispatch = useDispatch();
-  const postData = useSelector((state: RootState) => state.postData);
-  console.log(postData)
+  const postData = useSelector((state: RootState) => state.postData.data) as PostData[];
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await Posts();
-        const typedRes = res as PostData; // Explicitly specify the type
-        dispatch(setData(typedRes)); // Assuming setData sets the fetched data to the Redux store
-      } catch (error) {
-        console.error("Error fetching data:", error);
+
+  const fetchData = async () => {
+    try {
+      const res = await Posts();
+      const typedRes = (res as { posts?: PostData[] }).posts;
+      
+      if (Array.isArray(typedRes)) {
+        dispatch(setData(typedRes));
+      } else {
+        console.error('Invalid response format:', res);
       }
-    };
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      // Handle the error, e.g., show an error message or retry the API call
+    }
+  };
+  // ...
+  
 
+  // Initial data fetch when the component mounts
+  useEffect(() => {
     fetchData();
   }, []);
+
+
+
+console.log("post data",postData)
+
+
 
   return (
     <>
