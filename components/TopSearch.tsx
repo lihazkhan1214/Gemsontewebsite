@@ -12,10 +12,16 @@ interface TopSearchProps {
 
 export function TopSearch() {
   const dispatch = useDispatch();
+  const [isClient, setIsClient] = useState(false);
   const postData = useSelector((state: RootState) => state.postData.data) as PostData[];
   const [searchTerm, setSearchTerm] = useState("");
 
-  const encyclopediaItems = postData.filter((item) => item.category === "encyclopedia");
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Ensure postData is only accessed on the client side
+  const encyclopediaItems = isClient ? postData.filter((item) => item.category === "encyclopedia") : [];
 
   // Filter items based on search term
   const filteredItems = searchTerm
@@ -69,10 +75,7 @@ export function TopSearch() {
               ))}
             </div>
             <div className="flex items-center flex-col">
-              <Link href="/allencyclopedia" className="text-violet-800 text-2xl font-semibold leading-10 whitespace-nowrap hover:bg-violet-800 hover:text-[#FFF] justify-center items-center border mt-12 px-16 py-2 rounded-md border-solid border-violet-800 max-md:mt-10 max-md:px-5"
-              
-             
-              >
+              <Link href="/allencyclopedia" className="text-violet-800 text-2xl font-semibold leading-10 whitespace-nowrap hover:bg-violet-800 hover:text-[#FFF] justify-center items-center border mt-12 px-16 py-2 rounded-md border-solid border-violet-800 max-md:mt-10 max-md:px-5">
                 View all
               </Link>
             </div>
