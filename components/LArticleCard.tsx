@@ -2,16 +2,26 @@ import React from 'react';
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import { LArticleCardProps } from '@/constants';
+
+export interface LArticleCardProps {
+  title: string;
+  slug: string;
+
+  shortDescription: string;
+
+  picture: string;
+}
+
+
+
 
 
 function LArticleCard({
   title,
   slug,
-  category,
+
   shortDescription,
-  BirthDescription
-  ,
+  
   picture
 }: LArticleCardProps) {
 
@@ -43,7 +53,7 @@ function LArticleCard({
         </p>
 
         <div className="mb-5">
-          <Link href={`/${category}/${slug}`}>
+          <Link href={`/articles/${slug}`}>
             <button className="mt-5 bg-[#6B03C1] rounded-sm w-[120px] text-[#FFFFFF] font-normal text-[14px] py-2">
               View
             </button>

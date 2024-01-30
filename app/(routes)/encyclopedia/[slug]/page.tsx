@@ -11,8 +11,6 @@ interface PageParams {
 }
 
 const initialBlogDetail: SinglePostInterface = {
-  authorbio: '',
-  authorname: '',
   title: '',
   updatedAt: '',
   publishedAt: '',
@@ -93,10 +91,10 @@ function Page() {
 
   return (
     <main className="bg-[#FFF]">
-      {blogDetail ? (
+      {blogDetail && (
         <>
           <div className="padding-x">
-            <div className="flex flex-col scroll-smooth bg-[#F5F5F5] md:flex-row my-10 justify-center items-center">
+            <div className="flex flex-col scroll-smooth md:h-[400px]  bg-[#F5F5F5] md:flex-row my-10 justify-center items-center">
               <div className="flex flex-1 flex-col pl-12 py-16 gap-8">
                 <div className="flex flex-col">
                   <h2 className="text-[#2C2C2C] text-4xl capitalize font-[700]">{blogDetail.title}</h2>
@@ -112,8 +110,12 @@ function Page() {
                   <p className="text-base font-[400] text-[#595656]">Modified: {blogDetail.updatedAt}</p>
                 </div>
               </div>
-              <div className="flex flex-1 justify-end items-end relative">
-                <Image src={img} width={500} height={500} alt="ruby" />
+              <div className="flex flex-1 h-full justify-end items-end relative">
+                <div className="relative w-[400px] h-[400px]  md:w-full md:h-full">
+
+                <Image src={img} fill alt="ruby" />
+                </div>
+                
                 <div className="absolute bottom-6 left-0 w-full flex justify-center items-center gap-3">
                   <button
                     className={`flex justify-center items-center py-1 px-3 rounded-sm border border-white text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
@@ -213,11 +215,6 @@ function Page() {
               </div>
             </div>
           </div>
-        </>
-      ) : (
-        <>
-          <div className="flex h-[100vh] w-full flex-col justify-center items-center"></div>
-          <Loader />
         </>
       )}
     </main>

@@ -8,6 +8,9 @@ import { setData } from '@/redux/Slice';
 import { RootState } from '@/redux/store';
 import { Posts } from "@/services/index";
 import PostData from "@/constants";
+import { Articles } from "@/services/index";
+import { ArticleData } from "@/constants";
+import { setDataArticle } from "@/redux/ArticleSlice";
 
 
 export function HeroSection() {
@@ -32,11 +35,39 @@ export function HeroSection() {
     }
   };
   // ...
+
+
+
+  const fetchartilce = async () => {
+    try {
+      const res = await Articles();
+     
+      const typedRes = (res as { articles12
+        ?: ArticleData[] }).articles12;
+      
+      if (Array.isArray(typedRes)) {
+        dispatch(setDataArticle(typedRes));
+      } else {
+        console.error('Invalid response format:', res);
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      // Handle the error, e.g., show an error message or retry the API call
+    }
+  };
+
+
+
+
+
+
+
   
 
   // Initial data fetch when the component mounts
   useEffect(() => {
     fetchData();
+    fetchartilce();
   }, []);
 
 

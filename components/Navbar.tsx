@@ -65,9 +65,7 @@ const Navbar = () => {
           </div>
         ))}
 
-        <Link href="/allarticles" passHref>
-          <span className='text-[#000] text-[18px] hover:text-[#C986FF] font-[400] cursor-pointer' onClick={closeAllMenus}>Allarticles</span>
-        </Link>
+        
 
         <Link href="/allbirthstones" passHref>
           <span className='text-[#000] text-[18px] hover:text-[#C986FF] font-[400] cursor-pointer' onClick={closeAllMenus}>Birthstones</span>
@@ -124,9 +122,6 @@ const Navbar = () => {
     
 
     
-<Link href="/allarticles" passHref>
-          <span className='text-[#000] block p-2  sm:inline text-[18px] hover:text-[#C986FF] font-[400] cursor-pointer' onClick={closeAllMenus}>Allarticles</span>
-        </Link>
 
 
           <Link href="/allbirthstones" passHref>

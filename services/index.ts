@@ -48,6 +48,24 @@ export const Posts = async () => {
 
 
 
+export const Articles = async () => {
+  const query = gql`
+    query Articles {
+      articles12 {
+        slug
+        shortDescription
+        title1212
+        articlePicture {
+          url
+        }
+      }
+    }
+  `;
+  const response = await graphQLClient.request(query);
+  return response;
+};
+
+
 
 
 
@@ -73,8 +91,6 @@ export const getSingleBlog = async (slug: string) => {
   const query = gql`
     query SignlePost($slug: String!) {
       post(where: { slug: $slug }) {
-        authorname
-        authorbio
         birthSones
         category
         jewelry {
@@ -111,19 +127,48 @@ export const getSingleBlog = async (slug: string) => {
 
 
 
-export const getBlogcategories = async ({ slug }: { slug: string[] }) => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const getSingleArticle = async (slug: string) => {
   const query = gql`
-    query CategoryPosts($slug: [String!]!) {
-      posts(where: { category_in: $slug }) {
-        title
-        slug
-        shortDescription
-        polishedImg {
+    query SingleArticle($slug: String!) {
+      articles(where: {slug: $slug}) {
+        authorbio
+        authorname
+        publishedAt
+        title1212
+        updatedAt
+        createdBy{
+          name
+        }
+        tableOfContent {
+          json
+        }
+        authorPicture {
           url
         }
-        birthSones
-        birthDescription
-        category
+        articlePicture {
+          url
+        }
       }
     }
   `;
@@ -135,5 +180,3 @@ export const getBlogcategories = async ({ slug }: { slug: string[] }) => {
   const response = await graphQLClient.request(query, variables);
   return response;
 };
-
-

@@ -5,8 +5,7 @@ import LArticleCard from './LArticleCard';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/redux/store';
 import { Posts } from '@/services';
-import { setData } from '@/redux/Slice';
-
+import { ArticleData } from '@/constants';
 interface PropsData {
   data: any; // Adjust the type according to the actual data structure
 }
@@ -27,7 +26,7 @@ interface PostData {
 }
 
 function LArticlePagination() {
-  const postData = useSelector((state: RootState) => state.postData.data) as PostData[]; // Assert the type as PostData[]
+  const postData = useSelector((state: RootState) => state.articleData.data) as ArticleData[]; // Assert the type as PostData[]
 
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
@@ -38,8 +37,8 @@ function LArticlePagination() {
     ? postData.filter(
         (item) =>
           item &&
-          item.title &&
-          item.title.toLowerCase().includes(searchQuery.toLowerCase())
+          item.title1212 &&
+          item.title1212.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : [];
 
@@ -99,12 +98,12 @@ function LArticlePagination() {
           {currentItems.map((item, index) => (
             <LArticleCard
               key={index}
-              title={item.title}
+              title={item.title1212}
               slug={item.slug}
-              category={item.category}
-              BirthDescription={item.birthDescription}
+             
+             
               shortDescription={item.shortDescription}
-              picture={item.polishedImg.url}
+              picture={item.articlePicture.url}
             />
           ))}
         </div>

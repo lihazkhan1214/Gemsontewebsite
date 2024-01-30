@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { RootState } from '@/redux/store';
-import PostData from '@/constants';
+import { ArticleData } from '@/constants';
 
 interface SampleArrowProps {
     className?: string;
@@ -19,7 +19,7 @@ interface SampleArrowProps {
 function LArticleSlider() {
 
     const dispatch = useDispatch();
-    const postData = useSelector((state: RootState) => state.postData.data) as PostData[];
+    const postData = useSelector((state: RootState) => state.articleData.data) as ArticleData[];
 
 
 
@@ -135,12 +135,11 @@ function LArticleSlider() {
                                         <div className=" sm:px-3">
                                             <LArticleCard
                                                 key={index}
-                                                title={item.title}
+                                                title={item.title1212}
                                                 slug={item.slug}
-                                                category={item.category}
-                                                BirthDescription={item.birthDescription}
-                                                shortDescription={item.shortDescription}
-                                                picture={item.polishedImg.url}
+                                               
+                                               shortDescription={item.shortDescription}
+                                                picture={item.articlePicture.url}
                                             />
                                         </div> </>
                                 ))}

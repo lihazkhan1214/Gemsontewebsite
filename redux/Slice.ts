@@ -5,8 +5,9 @@ interface PostDataState {
   data: PostData[];
 }
 
+// Load data from local storage if available, otherwise initialize with an empty array
 const initialState: PostDataState = {
-  data: [], // Change this to an array
+  data: JSON.parse(localStorage.getItem('postData') || '[]'),
 };
 
 const dataSlice = createSlice({
@@ -15,6 +16,8 @@ const dataSlice = createSlice({
   reducers: {
     setData: (state, action: PayloadAction<PostData[]>) => {
       state.data = action.payload;
+      // Save data to local storage whenever it's updated
+      localStorage.setItem('postData', JSON.stringify(action.payload));
     },
   },
 });
