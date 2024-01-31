@@ -18,7 +18,7 @@ function GemCard() {
       {latestPosts.map((post, index) => (
         <div key={index} className="sm:w-[390px] hoverAnimation  mx-auto p-5 bg-[#FCFCFF] rounded-[16px]">
           <div className="relative w-[138px] mx-auto h-[131px]">
-            <Image src={post.articlePicture.url} alt={post.title1212} fill />
+            <Image src={post.articlePicture.url} alt="not found" fill />
           </div>
           <h1 className="cardTitle mt-5 text-[#21294D]">
             <span className='capitalize'>{post.title1212}</span> Facts and Information

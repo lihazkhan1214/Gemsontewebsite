@@ -68,7 +68,7 @@ export function HeroSection() {
   useEffect(() => {
     fetchData();
     fetchartilce();
-  }, []);
+  },[]);
 
 
 

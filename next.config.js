@@ -1,13 +1,12 @@
+// next.config.js
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
-    images: {
-        domains: ["res.cloudinary.com","uploadthing.com",'media.istockphoto.com','media.graphassets.com'],
-      
+     
+      images: {
+        domains: ["res.cloudinary.com", "uploadthing.com", "media.istockphoto.com", "media.graphassets.com"],
       },
-
+    };
     
+    module.exports = nextConfig;
     
-}
-
-module.exports = nextConfig
