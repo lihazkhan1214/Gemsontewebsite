@@ -1,6 +1,6 @@
 // dataSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import  PostData  from '@/constants/index';
+import PostData from '@/constants/index';
 
 interface PostDataState {
   data: PostData[];

@@ -1,7 +1,63 @@
+"use client";
 import * as React from "react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { Textanimation } from "./Textanimaiton";
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
+
+import { Articles } from "@/services/index";
+import { ArticleData } from "@/constants";
+import { setDataArticle } from "@/redux/ArticleSlice";
 
 function LArticleHero() {
+
+    const dispatch = useDispatch();
+
+  
+    
+  
+    const fetchArticle = async () => {
+      try {
+        const res = await Articles();
+        const typedRes = (res as { articles12?: ArticleData[] }).articles12;
+  
+        if (Array.isArray(typedRes)) {
+          dispatch(setDataArticle(typedRes));
+          // Save article data to localStorage
+          localStorage.setItem('articleData', JSON.stringify(typedRes));
+        } else {
+          console.error('Invalid response format:', res);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    // Initial data fetch when the component mounts
+    useEffect(() => {
+      
+  
+      const storedArticleData = localStorage.getItem('articleData');
+      if (storedArticleData) {
+        dispatch(setDataArticle(JSON.parse(storedArticleData)));
+      } else {
+        fetchArticle();
+      }
+    }, [dispatch]);
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="backdrop-blur-sm aallbg pl-20 pr-12 py-12 max-md:px-5">
             <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">

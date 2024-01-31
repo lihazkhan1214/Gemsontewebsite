@@ -1,9 +1,9 @@
-"use client";
+"use client"
 // Assuming your `setData` action from '@/redux/Slice' returns a promise
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Textanimation } from "./Textanimaiton";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { setData } from '@/redux/Slice';
 import { RootState } from '@/redux/store';
 import { Posts } from "@/services/index";
@@ -12,69 +12,60 @@ import { Articles } from "@/services/index";
 import { ArticleData } from "@/constants";
 import { setDataArticle } from "@/redux/ArticleSlice";
 
-
 export function HeroSection() {
-
   const dispatch = useDispatch();
-  const postData = useSelector((state: RootState) => state.postData.data) as PostData[];
-
 
   const fetchData = async () => {
     try {
       const res = await Posts();
       const typedRes = (res as { posts?: PostData[] }).posts;
-      
+
       if (Array.isArray(typedRes)) {
         dispatch(setData(typedRes));
+        // Save data to localStorage
+        localStorage.setItem('postData', JSON.stringify(typedRes));
       } else {
         console.error('Invalid response format:', res);
       }
     } catch (error) {
       console.error('Error fetching data:', error);
-      // Handle the error, e.g., show an error message or retry the API call
     }
   };
-  // ...
 
-
-
-  const fetchartilce = async () => {
+  const fetchArticle = async () => {
     try {
       const res = await Articles();
-     
-      const typedRes = (res as { articles12
-        ?: ArticleData[] }).articles12;
-      
+      const typedRes = (res as { articles12?: ArticleData[] }).articles12;
+
       if (Array.isArray(typedRes)) {
         dispatch(setDataArticle(typedRes));
+        // Save article data to localStorage
+        localStorage.setItem('articleData', JSON.stringify(typedRes));
       } else {
         console.error('Invalid response format:', res);
       }
     } catch (error) {
       console.error('Error fetching data:', error);
-      // Handle the error, e.g., show an error message or retry the API call
     }
   };
-
-
-
-
-
-
-
-  
 
   // Initial data fetch when the component mounts
   useEffect(() => {
-    fetchData();
-    fetchartilce();
-  },[]);
+    // Try to retrieve data from localStorage on mount
+    const storedPostData = localStorage.getItem('postData');
+    if (storedPostData) {
+      dispatch(setData(JSON.parse(storedPostData)));
+    } else {
+      fetchData();
+    }
 
-
-
-console.log("post data",postData)
-
-
+    const storedArticleData = localStorage.getItem('articleData');
+    if (storedArticleData) {
+      dispatch(setDataArticle(JSON.parse(storedArticleData)));
+    } else {
+      fetchArticle();
+    }
+  }, [dispatch]);
 
   return (
     <>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import AllBstoneCard from './allBstoneCard';
 import PostData from '@/constants';
@@ -9,7 +9,12 @@ import { useSelector } from 'react-redux';
 function AllbPagination() {
   const postData = useSelector((state: RootState) => state.postData.data) as PostData[];
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortedItems, setSortedItems] = useState<PostData[]>(postData);
+  const [sortedItems, setSortedItems] = useState<PostData[]>([]);
+
+  // Update sortedItems when postData changes
+  useEffect(() => {
+    setSortedItems(postData);
+  }, [postData]);
 
   // Filter items based on the search term
   const filteredItems = sortedItems.filter((item) =>
@@ -40,22 +45,28 @@ function AllbPagination() {
 
   // Create a mapping for birth months
   const monthMap: { [key: string]: number } = {
-    January: 1,
-    February: 2,
-    March: 3,
-    April: 4,
-    May: 5,
-    June: 6,
-    July: 7,
-    August: 8,
-    September: 9,
-    October: 10,
-    November: 11,
-    December: 12,
+    january: 1,
+    february: 2,
+    march: 3,
+    april: 4,
+    may: 5,
+    june: 6,
+    july: 7,
+    august: 8,
+    september: 9,
+    october: 10,
+    november: 11,
+    december: 12,
   };
 
   // Sort items by birth month
-  const sortedByMonth = currentItems.sort((a, b) => monthMap[a.birthSones] - monthMap[b.birthSones]);
+  const sortedByMonth = currentItems.sort((a, b) => {
+    const monthA = a.birthSones.toLowerCase();
+    const monthB = b.birthSones.toLowerCase();
+    return monthMap[monthA] - monthMap[monthB];
+  });
+
+  console.log("months", sortedByMonth, postData);
 
   return (
     <>

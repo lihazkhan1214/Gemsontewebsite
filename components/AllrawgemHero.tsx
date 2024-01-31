@@ -1,7 +1,53 @@
+"use client";
 import * as React from "react";
 import Image from "next/image";
 
+import { useState, useEffect } from "react";
+import { Textanimation } from "./Textanimaiton";
+import { useDispatch, useSelector } from 'react-redux';
+import { setData } from '@/redux/Slice';
+import { RootState } from '@/redux/store';
+import { Posts } from "@/services/index";
+import PostData from "@/constants";
+
 function AllrawgemHero() {
+
+
+
+  const dispatch = useDispatch();
+  const postData = useSelector((state: RootState) => state.postData.data) as PostData[];
+
+  const fetchData = async () => {
+    try {
+      const res = await Posts();
+      const typedRes = (res as { posts?: PostData[] }).posts;
+
+      if (Array.isArray(typedRes)) {
+        dispatch(setData(typedRes));
+        // Save data to localStorage
+        localStorage.setItem('postData', JSON.stringify(typedRes));
+      } else {
+        console.error('Invalid response format:', res);
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+ 
+
+  // Initial data fetch when the component mounts
+  useEffect(() => {
+    // Try to retrieve data from localStorage on mount
+    const storedPostData = localStorage.getItem('postData');
+    if (storedPostData) {
+      dispatch(setData(JSON.parse(storedPostData)));
+    } else {
+      fetchData();
+    }
+
+   
+  }, [dispatch]);
   return (
     <div className="flex-col overflow-hidden relative flex min-h-[607px] justify-center items-stretch">
       
