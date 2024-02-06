@@ -24,9 +24,14 @@ function EncCard( {title,
                     <h1 className="cardTitle text-[#000]">{title}</h1>
 
                     <p className="text-[14px] text-[#111111] font-normal text-justify mt-5 leading-7">
-                        {
+                       {
+                        shortDescription &&(<>
+                         {
                             shortDescription.slice(0,200)
                         }
+                        
+                        </>)
+                       }
                        </p>
                 </div>
 
