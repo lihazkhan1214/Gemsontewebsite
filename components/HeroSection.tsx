@@ -51,20 +51,9 @@ export function HeroSection() {
 
   // Initial data fetch when the component mounts
   useEffect(() => {
-    // Try to retrieve data from localStorage on mount
-    const storedPostData = localStorage.getItem('postData');
-    if (storedPostData) {
-      dispatch(setData(JSON.parse(storedPostData)));
-    } else {
-      fetchData();
-    }
-
-    const storedArticleData = localStorage.getItem('articleData');
-    if (storedArticleData) {
-      dispatch(setDataArticle(JSON.parse(storedArticleData)));
-    } else {
-      fetchArticle();
-    }
+    
+    fetchData();
+    fetchArticle();
   }, [dispatch]);
 
   return (

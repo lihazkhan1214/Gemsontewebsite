@@ -2,13 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { getSingleBlog } from '@/services/index';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
 import { SinglePostInterface } from '@/constants';
 import Loader from '@/components/Loader';
 
-interface PageParams {
-  slug: string;
-}
 
 const initialBlogDetail: SinglePostInterface = {
   title: '',
@@ -38,15 +34,14 @@ const initialBlogDetail: SinglePostInterface = {
   selectedImageType: 'polished',
 };
 
-function Page() {
-  const { slug } = useParams() as { slug: string };
+function Page({ params }: { params: { slug: string } }) {
   const [blogDetail, setBlogDetail] = useState<SinglePostInterface | undefined>(undefined);
   const [img, setImg] = useState<string>(initialBlogDetail.polishedImg.url);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res: any = await getSingleBlog(slug);
+        const res: any = await getSingleBlog(params.slug);
 
         if (res && res.post) {
           const publishedDate = new Date(res.post.publishedAt);
@@ -76,10 +71,10 @@ function Page() {
       }
     };
 
-    if (slug) {
+    if (params.slug) {
       fetchData();
     }
-  }, [slug]);
+  }, [params.slug]);
 
   const handleImageChange = (url: string, imageType: string) => {
     setImg(url);

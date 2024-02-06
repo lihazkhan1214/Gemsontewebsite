@@ -7,7 +7,9 @@ import { RootState } from '@/redux/store';
 import PostData from '@/constants';
 
 function AllrawgemPagination() {
-  const postData = useSelector((state: RootState) => state.postData.data) as PostData[];
+  const postData = useSelector((state: RootState) => state.postData.data.filter((item)=>item.category==="rawstones")) as PostData[];
+
+ 
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
 

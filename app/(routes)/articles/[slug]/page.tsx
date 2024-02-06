@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { getSingleArticle } from '@/services/index';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
 import { SingleArticleInterface } from '@/constants';
 import Loader from '@/components/Loader';
 
@@ -35,14 +34,14 @@ const initialBlogDetail: SingleArticleInterface = {
   ],
 };
 
-function Page() {
-  const { slug } = useParams() as { slug: string };
+function Page({ params }: { params: { slug: string } }) {
+ 
   const [blogDetail, setBlogDetail] = useState<SingleArticleInterface | undefined>(undefined);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res: any = await getSingleArticle(slug);
+        const res: any = await getSingleArticle(params.slug);
 
         if (res && res.articles) {
           const publishedDate = new Date(res.articles.publishedAt);
@@ -70,10 +69,10 @@ function Page() {
       }
     };
 
-    if (slug) {
+    if (params.slug) {
       fetchData();
     }
-  }, [slug]);
+  }, [params.slug]);
 
   return (
     <main className="bg-[#FFF]">
