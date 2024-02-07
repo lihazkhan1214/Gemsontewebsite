@@ -111,23 +111,23 @@ function Page({ params }: { params: { slug: string } }) {
 
                 </div>
                
-                <div className="absolute bottom-6 left-0 w-full flex justify-center items-center gap-3">
+                <div className="absolute bottom-6 left-0 w-full flex  md:flex-wrap justify-center items-center gap-3">
                   <button
-                    className={`flex justify-center items-center py-1 px-3 rounded-sm border border-white text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex w-[120px] h-[50px]  justify-center items-center py-3 px-6 rounded-sm border border-white text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.polishedImg.url, 'polished')}
                   >
                     Polished
                   </button>
                   <button
-                    className={`flex justify-center items-center py-1 px-3 rounded-sm text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'rough' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex w-[120px] h-[50px]  justify-center items-center py-3 px-6 rounded-sm text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'rough' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.rough.url, 'rough')}
                   >
                     Rough
                   </button>
                   <button
-                    className={`flex justify-center items-center py-1 px-3 rounded-sm text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'jewelry' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex w-[120px] h-[50px]  justify-center items-center py-3 px-6 rounded-sm text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'jewelry' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.jewelry.url, 'jewelry')}
                   >
