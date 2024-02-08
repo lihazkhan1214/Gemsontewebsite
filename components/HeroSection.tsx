@@ -54,7 +54,7 @@ export function HeroSection() {
     
     fetchData();
     fetchArticle();
-  }, [dispatch]);
+  }, []);
 
   return (
     <>

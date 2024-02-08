@@ -21,6 +21,9 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
     }},
+    icons: {
+      icon: '/logo.png',
+    },
   
  
 };
@@ -32,9 +35,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={` scroll-smooth ${inter.className}`}>
         <Providers>
-        
+       
      
       
        

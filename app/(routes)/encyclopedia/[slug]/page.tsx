@@ -112,30 +112,58 @@ function Page({ params }: { params: { slug: string } }) {
               <div className="flex flex-1 h-full justify-end items-end relative">
                 <div className="relative w-[400px] h-[400px]  md:w-full md:h-full">
 
-                <Image src={img} fill alt="ruby" />
+                  <Image src={img} fill alt="ruby" />
                 </div>
-                
+
                 <div className="absolute bottom-6 left-0 w-full flex justify-center items-center gap-3">
                   <button
-                    className={`flex w-[120px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-3 px-6 rounded-sm border border-white text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2   w-[50px] sm:w-[160px]  max-sm:h-[50px] sm:h-[70px] hover:bg-[#8e8e8f] justify-center items-center py-3 px-6  border rounded-[50%] sm:rounded-[100px] border-white text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.polishedImg.url, 'polished')}
                   >
-                    Polished
+                    <div className="w-[35px] relative h-[35px] ">
+
+
+
+
+                      <Image src="/assets/fimages/p.png" alt="not found" fill />
+
+                    </div>
+                    <span className='max-sm:hidden'>Polished</span>
                   </button>
                   <button
-                    className={`flex w-[120px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 rounded-sm text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'rough' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 rounded-[100px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'rough' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.rough.url, 'rough')}
                   >
-                    Rough
+
+                    <div className="w-[35px] relative h-[35px]">
+
+
+
+
+                      <Image src="/assets/fimages/r.png" alt="not found" fill />
+
+                    </div>
+                    <span className='max-sm:hidden'> Rough</span>
+
                   </button>
                   <button
-                    className={`flex w-[120px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-1 px-3 rounded-sm text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'jewelry' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 w-[50px] sm:w-[160px] rounded-[100px] h-[50px] sm:h-[70px] hover:bg-[#8e8e8f] justify-center items-center py-1 px-3 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'jewelry' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.jewelry.url, 'jewelry')}
                   >
-                    Jewelry
+
+<div className="w-[35px] relative h-[35px] ">
+
+
+
+
+<Image src="/assets/fimages/j.png" alt="not found" fill />
+
+</div>
+<span className='max-sm:hidden'> Jewelry</span>
+                   
                   </button>
                 </div>
               </div>
