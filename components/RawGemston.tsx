@@ -1,9 +1,10 @@
-"use client";
+"use client"
 import { Rawgemcard } from "./RawgemCard";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import PostData from "@/constants";
 import Link from "next/link";
+import Image from "next/image";
 
 interface RawItem {
   polishedImg: { url: string };
@@ -25,7 +26,10 @@ export function RawGemston() {
 
   return (
     <>
-      <div className="padding-x mt-12 py-10 RawGem" id="GemArticles">
+      <div className="padding-x mt-12 py-10 relative h-full w-full " id="GemArticles">
+        {/* Removed background image */}
+        <Image src="/assets/fimages/rawgem.png" className="absolute  -z-40" alt="Background Image" fill />
+
         <h1 className='global__title text-[#FFF]'>Raw Gemstones</h1>
         <p className='text-white text-[22px] mt-5 leading-8 md:w-[80%] text-justify'>
           Embark on a global gemstone odyssey, from Sri Lanka&apos;s dazzling sapphires to Colombia&apos;s lush emeralds, exploring the countries with the richest variety of precious stones.

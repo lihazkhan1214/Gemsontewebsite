@@ -5,14 +5,17 @@ import Link from 'next/link';
 
 
 
+
 export function GetArticle() {
 
   return (
     <>
-      <div className="padding-x mt-12 py-10 Gemarticle" id="GemArticles">
+      <div className="padding-x mt-12 py-10 relative w-full h-full " id="GemArticles">
+        <Image src="/assets/fimages/article.png" alt='not found' fill className='absolute  -z-40'/>
+       
 
         <div className=" flex flex-col items-center ">
-          <h1 className='global__title text-center text-[#FFF]'>Gemstones Recent Articles</h1>
+          <h1 className='global__title text-center text-[#FFF]'>Gemstones  Recent Articles</h1>
           
           <p className='text-white text-[22px] mt-3 leading-8 md:w-[80%] text-center'>Unveiling the World of Gemstones: In-depth Articles and Insights on the Beauty, History, and Mystique of Earth&apos;s Precious Treasures</p>
 
