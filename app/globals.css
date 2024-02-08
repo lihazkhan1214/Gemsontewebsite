@@ -56,10 +56,10 @@
 
 /* All article background image */
 
-.aallbg{
+/* .aallbg{
   @apply bg-[url("/assets/fimages/allarticleHero.png")] bg-center bg-cover ;
 
-}
+} */
 .cardTitle{
   @apply  text-2xl font-medium leading-8  ;
 

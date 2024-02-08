@@ -59,7 +59,8 @@ function LArticleHero() {
 
 
     return (
-        <div className="backdrop-blur-sm aallbg pl-20 pr-12 py-12 max-md:px-5">
+        <div className="backdrop-blur-sm  pl-20 pr-12 py-12 w-full h-full relative  max-md:px-5">
+             <Image src="/assets/fimages/allarticleHero.png" alt="not found" className=" absolute -z-10" fill/>
             <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                 <div className="flex flex-col items-stretch w-[48%] max-md:w-full max-md:ml-0">
                     <div className="items-stretch flex flex-col my-auto max-md:max-w-full max-md:mt-10">
