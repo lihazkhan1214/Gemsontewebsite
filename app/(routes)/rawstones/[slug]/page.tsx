@@ -86,7 +86,7 @@ function Page({ params }: { params: { slug: string } }) {
 
   return (
     <main className="bg-[#FFF]">
-      {blogDetail && (
+      {blogDetail ? (
         <>
           <div className="padding-x">
             <div className="flex flex-col md:h-[450px] scroll-smooth bg-[#F5F5F5] md:flex-row my-10 justify-center items-center">
@@ -107,12 +107,12 @@ function Page({ params }: { params: { slug: string } }) {
               </div>
               <div className="flex flex-1 h-full justify-end items-end relative">
                 <div className="relative w-[400px] h-[400px]  md:w-full md:h-full">
-                <Image src={img} alt="ruby" fill />
+                  <Image src={img} alt="ruby" fill />
 
                 </div>
-               
+
                 <div className="absolute bottom-6 left-0 w-full flex  md:flex-wrap justify-center items-center gap-3">
-                <button
+                  <button
                     className={`flex gap-2 rounded-[100px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF]  ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.polishedImg.url, 'polished')}
@@ -239,7 +239,20 @@ function Page({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </>
-      ) }
+      ) : (<>
+
+
+        <div className=" w-full h-[100vh] flex items-center justify-center ">
+
+          <Loader />
+          
+
+        </div>
+
+
+
+
+      </>)}
     </main>
   );
 }
