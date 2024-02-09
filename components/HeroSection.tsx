@@ -60,7 +60,7 @@ export function HeroSection() {
     <>
       <div className="flex-col overflow-hidden relative flex min-h-[854px] px-2 md:padding-x  py-12 items-start max-md:px-5">
         <div className="absolute h-full w-full object-cover object-center inset-0">
-          <Image src="/assets/fimages/hero.png" alt="not found" fill />
+          <Image className="" src="/assets/fimages/mobilehero.png" alt="not found" fill/>
         </div>
         <div>
           <div className="hidden md:block h-[160px]">

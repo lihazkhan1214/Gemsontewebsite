@@ -110,7 +110,7 @@ function Page({ params }: { params: { slug: string } }) {
                 </div>
               </div>
               <div className="flex flex-1 h-full justify-end items-end relative">
-                <div className="relative w-[400px] h-[400px]  md:w-full md:h-full">
+                <div className="relative w-[310px] h-[310px]  md:w-full md:h-full">
 
                   <Image src={img} fill alt="ruby" />
                 </div>

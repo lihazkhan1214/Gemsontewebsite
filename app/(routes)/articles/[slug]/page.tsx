@@ -95,7 +95,7 @@ function Page({ params }: { params: { slug: string } }) {
                 </div>
               </div>
               <div className="flex h-full flex-1 justify-end items-end relative">
-            <div className="relative w-[400px] h-[400px]  md:w-full md:h-full">
+            <div className="relative w-[310px] h-[310px] sm:w-full sm:h-full">
 
             <Image src={blogDetail.authorPicture.url}  alt="not found" fill />
             </div>
