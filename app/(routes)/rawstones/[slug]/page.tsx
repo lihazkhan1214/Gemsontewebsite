@@ -113,11 +113,11 @@ function Page({ params }: { params: { slug: string } }) {
                
                 <div className="absolute bottom-6 left-0 w-full flex  md:flex-wrap justify-center items-center gap-3">
                 <button
-                    className={`flex gap-2   w-[50px] sm:w-[160px]  max-sm:h-[50px] sm:h-[70px] hover:bg-[#8e8e8f] justify-center items-center py-3 px-6  border rounded-[50%] sm:rounded-[100px] border-white text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 rounded-[100px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF]  ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.polishedImg.url, 'polished')}
                   >
-                    <div className="w-[35px] relative h-[35px] ">
+                    <div className="w-[35px] h-[35px] relative  ">
 
 
 

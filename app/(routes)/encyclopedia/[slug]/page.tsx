@@ -117,7 +117,7 @@ function Page({ params }: { params: { slug: string } }) {
 
                 <div className="absolute bottom-6 left-0 w-full flex justify-center items-center gap-3">
                   <button
-                    className={`flex gap-2   w-[50px] sm:w-[160px]  max-sm:h-[50px] sm:h-[70px] hover:bg-[#8e8e8f] justify-center items-center py-3 px-6  border rounded-[50%] sm:rounded-[100px] border-white text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 rounded-[100px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.polishedImg.url, 'polished')}
                   >
@@ -154,16 +154,16 @@ function Page({ params }: { params: { slug: string } }) {
                     onClick={() => handleImageChange(blogDetail.jewelry.url, 'jewelry')}
                   >
 
-<div className="w-[35px] relative h-[35px] ">
+                    <div className="w-[35px] relative h-[35px] ">
 
 
 
 
-<Image src="/assets/fimages/j.png" alt="not found" fill />
+                      <Image src="/assets/fimages/j.png" alt="not found" fill />
 
-</div>
-<span className='max-sm:hidden'> Jewelry</span>
-                   
+                    </div>
+                    <span className='max-sm:hidden'> Jewelry</span>
+
                   </button>
                 </div>
               </div>
