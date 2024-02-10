@@ -133,7 +133,7 @@ function Page({ params }: { params: { slug: string } }) {
                     onClick={() => handleImageChange(blogDetail.rough.url, 'rough')}
                   >
 
-                    <div className="w-[26px] mx-2 relative h-[32px]">
+                    <div className="w-[26px] relative h-[32px]">
 
 
 
