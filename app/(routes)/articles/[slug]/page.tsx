@@ -1,9 +1,16 @@
 "use client";
+// import type { Metadata, ResolvingMetadata } from 'next'
 import React, { useEffect, useState } from 'react';
 import { getSingleArticle } from '@/services/index';
 import Image from 'next/image';
 import { SingleArticleInterface } from '@/constants';
 import Loader from '@/components/Loader';
+import Head from 'next/head';
+ 
+// export const metadata: Metadata = {
+//   title: 'artilce',
+//   description: 'article descrition',
+// }
 
 interface PageParams {
   slug: string;
@@ -76,6 +83,12 @@ function Page({ params }: { params: { slug: string } }) {
 
   return (
     <main className="bg-[#FFF]">
+<Head>
+        <title>titleof article</title>
+        <meta name="description" content='description of article' />
+      </Head>
+
+      
       {blogDetail ? (
         <>
           <div className="padding-x">
@@ -192,3 +205,5 @@ function Page({ params }: { params: { slug: string } }) {
 }
 
 export default Page;
+
+
