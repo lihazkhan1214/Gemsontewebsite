@@ -117,7 +117,7 @@ function Page({ params }: { params: { slug: string } }) {
 
                 <div className="absolute bottom-6 left-0 w-full flex justify-center items-center gap-3">
                   <button
-                    className={`flex gap-2 rounded-[100px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 rounded-[8px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030] border-white border-2' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.polishedImg.url, 'polished')}
                   >
@@ -132,7 +132,7 @@ function Page({ params }: { params: { slug: string } }) {
                     <span className='max-sm:hidden'>Polished</span>
                   </button>
                   <button
-                    className={`flex gap-2 rounded-[100px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'rough' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 rounded-[8px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'rough' ? 'bg-[#503030] border-white border-2' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.rough.url, 'rough')}
                   >
@@ -149,7 +149,7 @@ function Page({ params }: { params: { slug: string } }) {
 
                   </button>
                   <button
-                    className={`flex gap-2 w-[50px] sm:w-[160px] rounded-[100px] h-[50px] sm:h-[70px] hover:bg-[#8e8e8f] justify-center items-center py-1 px-3 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'jewelry' ? 'bg-[#503030]' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 w-[50px] sm:w-[160px] rounded-[8px] h-[50px] sm:h-[70px] hover:bg-[#8e8e8f] justify-center items-center py-1 px-3 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'jewelry' ? 'bg-[#503030] border-white border-2' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.jewelry.url, 'jewelry')}
                   >

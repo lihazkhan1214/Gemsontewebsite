@@ -35,3 +35,10 @@ function page() {
 }
 
 export default page
+
+export async function generateMetadata() {
+  return {
+    title: "birthstones",
+    description:"this is birthstones description"
+  }
+}

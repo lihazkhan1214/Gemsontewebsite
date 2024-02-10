@@ -103,7 +103,7 @@ function LArticlePagination() {
              
              
               shortDescription={item.shortDescription}
-              picture={item.articlePicture.url}
+              picture={item.featuredimage.url}
             />
           ))}
         </div>

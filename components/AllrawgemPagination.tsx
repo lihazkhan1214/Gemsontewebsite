@@ -68,7 +68,7 @@ function AllrawgemPagination() {
           <Rawgemcard key={index} 
           
           
-          picture={item.polishedImg.url}
+          picture={item.featuredimage.url}
           BirthDescription={item.birthDescription}
           shortDescription={item.shortDescription}
           title={item.title}

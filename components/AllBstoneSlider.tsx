@@ -126,7 +126,7 @@ function AllBstonesSlider() {
                 <Slider {...settings}>
                     {shuffledPostData.slice(0, 5).map((item, index) => (
                         <div key={index} className="px-2 sm:px-3">
-                            <AllBstoneCard picture={item.polishedImg.url}  birthstones={item.birthSones}  shortDescription={item.shortDescription} title={item.title} slug={item.slug} category={item.category} birthDescription={item.birthDescription}  />
+                            <AllBstoneCard picture={item.featuredimage.url}  birthstones={item.birthSones}  shortDescription={item.shortDescription} title={item.title} slug={item.slug} category={item.category} birthDescription={item.birthDescription}  />
                         </div>
                     ))}
                 </Slider>

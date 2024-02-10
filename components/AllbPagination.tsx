@@ -93,7 +93,7 @@ function AllbPagination() {
           {sortedByMonth.map((item, index) => (
             <AllBstoneCard
               key={index}
-              picture={item.polishedImg.url}
+              picture={item.featuredimage.url}
               birthstones={item.birthSones}
               shortDescription={item.shortDescription}
               title={item.title}

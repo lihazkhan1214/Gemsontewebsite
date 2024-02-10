@@ -54,8 +54,7 @@ interface PostData {
   shortDescription: string;
   birthDescription:string;
   birthSones:string;
-  
-  polishedImg: {
+  featuredimage:{
     url:string
   }
   
@@ -178,9 +177,10 @@ export  interface ArticleData {
   title1212: string;
  slug: string;
  shortDescription: string;
- articlePicture:{
+ featuredimage:{
   url:string;
 }
+
  
 
 }

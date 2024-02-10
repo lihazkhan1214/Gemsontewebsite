@@ -66,7 +66,7 @@ export function TopSearch() {
                   <div className="flex flex-col items-stretch">
                     <div className="flex flex-col items-center max-md:mt-3">
                       <div className="aspect-[0.69] rounded-md relative object-contain object-center w-[198px] overflow-hidden">
-                        <Image src={item.polishedImg.url} alt="not found" fill />
+                        <Image src={item.featuredimage.url} alt="not found" fill />
                       </div>
                       <div className="text-black text-lg mt-3">{item.title}</div>
                     </div>

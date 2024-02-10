@@ -139,7 +139,7 @@ function LArticleSlider() {
                                                 slug={item.slug}
                                                
                                                shortDescription={item.shortDescription}
-                                                picture={item.articlePicture.url}
+                                                picture={item.featuredimage.url}
                                             />
                                         </div> </>
                                 ))}

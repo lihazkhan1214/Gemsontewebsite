@@ -41,7 +41,7 @@ export function Birthstone() {
               category={birthstone.category}
               shortDescription={birthstone.shortDescription}
               birthDescription={birthstone.birthDescription}
-              picture={birthstone.polishedImg.url}
+              picture={birthstone.featuredimage.url}
             />
           ))}
         </div>

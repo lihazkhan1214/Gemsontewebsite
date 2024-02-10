@@ -82,7 +82,7 @@ function EncAbout() {
                 </div>
               </div>
               <div className="w-full xl:w-[50%] relative h-[300px] max-sm:w-[300px] sm:h-[500px]">
-                <Image className="rounded-r-[16px]" src={item.polishedImg.url} alt="not found" fill />
+                <Image className="rounded-r-[16px]" src={item.featuredimage.url} alt="not found" fill />
               </div>
             </div>
           </div>

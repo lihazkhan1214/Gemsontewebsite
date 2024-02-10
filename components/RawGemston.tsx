@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 interface RawItem {
-  polishedImg: { url: string };
+  featuredimage: { url: string };
   birthDescription: string;
   shortDescription: string;
   title: string;
@@ -39,7 +39,7 @@ export function RawGemston() {
         {randomRawItems.map((rawItem: RawItem, index: number) => (
           <Rawgemcard
             key={index}
-            picture={rawItem.polishedImg.url}
+            picture={rawItem.featuredimage.url}
             BirthDescription={rawItem.birthDescription}
             shortDescription={rawItem.shortDescription}
             title={rawItem.title}

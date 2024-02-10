@@ -69,7 +69,7 @@ function Page() {
             category={item.category}
             shortDescription={item.shortDescription}
             BirthDescription={item.birthDescription}
-            picture={item.polishedImg.url}
+            picture={item.featuredimage.url}
           
             
             />

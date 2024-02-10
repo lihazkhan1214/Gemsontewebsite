@@ -5,12 +5,10 @@ import { getSingleArticle } from '@/services/index';
 import Image from 'next/image';
 import { SingleArticleInterface } from '@/constants';
 import Loader from '@/components/Loader';
-import Head from 'next/head';
  
-// export const metadata: Metadata = {
-//   title: 'artilce',
-//   description: 'article descrition',
-// }
+
+
+
 
 interface PageParams {
   slug: string;
@@ -41,7 +39,7 @@ const initialBlogDetail: SingleArticleInterface = {
   ],
 };
 
-function Page({ params }: { params: { slug: string } }) {
+function BlogArticle({ params }: { params: { slug: string } }) {
  
   const [blogDetail, setBlogDetail] = useState<SingleArticleInterface | undefined>(undefined);
 
@@ -83,10 +81,7 @@ function Page({ params }: { params: { slug: string } }) {
 
   return (
     <main className="bg-[#FFF]">
-<Head>
-        <title>titleof article</title>
-        <meta name="description" content='description of article' />
-      </Head>
+
 
       
       {blogDetail ? (
@@ -204,6 +199,6 @@ function Page({ params }: { params: { slug: string } }) {
   );
 }
 
-export default Page;
+export default BlogArticle;
 
 

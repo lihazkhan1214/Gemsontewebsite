@@ -12,7 +12,7 @@ export const Posts = async () => {
     
       slug
       shortDescription
-      polishedImg {
+      featuredimage{
         url
       }
       birthSones
@@ -48,6 +48,9 @@ export const Posts = async () => {
 
 
 
+
+
+
 export const Articles = async () => {
   const query = gql`
     query Articles {
@@ -55,7 +58,7 @@ export const Articles = async () => {
         slug
         shortDescription
         title1212
-        articlePicture {
+        featuredimage{
           url
         }
       }
@@ -87,12 +90,17 @@ export const Articles = async () => {
 
 
 
+
+
 export const getSingleBlog = async (slug: string) => {
   const query = gql`
     query SignlePost($slug: String!) {
       post(where: { slug: $slug }) {
         birthSones
         category
+        seoTitle
+        seoDescription
+        
         jewelry {
           url
         }
@@ -156,6 +164,11 @@ export const getSingleArticle = async (slug: string) => {
         authorname
         publishedAt
         title1212
+        seoTitle
+        seoDescription
+        featuredimage{
+          url
+        }
         updatedAt
         createdBy{
           name
