@@ -121,7 +121,7 @@ function Page({ params }: { params: { slug: string } }) {
                       }`}
                     onClick={() => handleImageChange(blogDetail.polishedImg.url, 'polished')}
                   >
-                    <div className="w-[35px] relative h-[35px] ">
+                    <div className="w-[34px] relative h-[28px] ">
 
 
 
@@ -137,7 +137,7 @@ function Page({ params }: { params: { slug: string } }) {
                     onClick={() => handleImageChange(blogDetail.rough.url, 'rough')}
                   >
 
-                    <div className="w-[35px] relative h-[35px]">
+                    <div className="w-[26px] relative h-[32px]">
 
 
 
@@ -154,7 +154,7 @@ function Page({ params }: { params: { slug: string } }) {
                     onClick={() => handleImageChange(blogDetail.jewelry.url, 'jewelry')}
                   >
 
-                    <div className="w-[35px] relative h-[35px] ">
+                    <div className="w-[22px] relative h-[30px] ">
 
 
 
