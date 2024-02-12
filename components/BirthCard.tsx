@@ -36,9 +36,13 @@ function BirthCard({
                     <h1 className="cardTitle text-[#000]"> {title}- {birthSones}</h1>
 
                     <p className="text-[14px] text-[#111111] font-normal text-justify mt-3 leading-7">
-                       {
+                    {birthDescription &&(<>
+                        {
                         birthDescription.slice(0,200)
-                       } 
+                       }
+                    </>)}
+                       
+                       
                         ..
                         </p>
                 </div>
