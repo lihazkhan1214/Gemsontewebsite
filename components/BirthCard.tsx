@@ -38,8 +38,9 @@ function BirthCard({
                     <p className="text-[14px] text-[#111111] font-normal text-justify tracking-normal mt-3 leading-7">
                     {birthDescription &&(<>
                         {
-                        birthDescription.slice(0,200)
+                        birthDescription.slice(0,160)
                        }
+                       ...
                     </>)}
                        
                        

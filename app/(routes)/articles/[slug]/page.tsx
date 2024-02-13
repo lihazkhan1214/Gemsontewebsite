@@ -84,7 +84,7 @@ function BlogArticle({ params }: { params: { slug: string } }) {
 
 
       
-      {blogDetail ? (
+      {blogDetail && (
         <>
           <div className="padding-x">
             <div className="flex flex-col md:h-[400px]  scroll-smooth bg-[#F5F5F5] md:flex-row my-10 justify-center items-center">
@@ -105,7 +105,7 @@ function BlogArticle({ params }: { params: { slug: string } }) {
               <div className="flex h-full flex-1 justify-end items-end relative">
             <div className="relative w-[310px] h-[310px] sm:w-full sm:h-full">
 
-            <Image src={blogDetail.authorPicture.url}  alt="not found" fill />
+            <Image src={blogDetail.articlePicture.url}  alt="not found" fill />
             </div>
               </div>
             </div>
@@ -183,18 +183,7 @@ function BlogArticle({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </>
-      ):(<>
-      <div className=" w-full h-[100vh] flex items-center justify-center ">
-
-<Loader />
-
-
-</div>
-      
-      </>)
-      
-      
-      }
+      )}
     </main>
   );
 }
