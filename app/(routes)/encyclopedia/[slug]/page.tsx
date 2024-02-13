@@ -117,11 +117,11 @@ function Page({ params }: { params: { slug: string } }) {
 
                 <div className="absolute bottom-6 left-0 w-full flex justify-center items-center gap-3">
                   <button
-                    className={`flex gap-2 rounded-[8px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030] border-white border-2' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 w-[50px] h-[50px] sm:w-[140px] rounded-[8px] sm:rounded-[36px]  sm:h-[50px] hover:bg-[#8e8e8f] justify-center items-center sm:py-3 sm:px-6 text-sm font-[400] text-[#FFF]  ${blogDetail.selectedImageType === 'polished' ? 'bg-[#503030] border-white border-2' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.polishedImg.url, 'polished')}
                   >
-                    <div className="w-[34px] relative h-[28px] ">
+                    <div className="relative w-[34px]  h-[28px] ">
 
 
 
@@ -132,12 +132,12 @@ function Page({ params }: { params: { slug: string } }) {
                     <span className='max-sm:hidden'>Polished</span>
                   </button>
                   <button
-                    className={`flex gap-2 rounded-[8px] w-[50px] sm:w-[160px] sm:h-[70px] h-[50px] hover:bg-[#8e8e8f] justify-center items-center py-2 px-5 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'rough' ? 'bg-[#503030] border-white border-2' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 w-[50px] h-[50px] rounded-[8px]  sm:w-[140px] sm:rounded-[36px] sm:h-[50px] hover:bg-[#8e8e8f] justify-center items-center sm:py-3 sm:px-6 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'rough' ? 'bg-[#503030] border-white border-2' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.rough.url, 'rough')}
                   >
 
-                    <div className="w-[26px] relative h-[32px]">
+                    <div className="w-[30px] relative h-[26px]">
 
 
 
@@ -149,12 +149,12 @@ function Page({ params }: { params: { slug: string } }) {
 
                   </button>
                   <button
-                    className={`flex gap-2 w-[50px] sm:w-[160px] rounded-[8px] h-[50px] sm:h-[70px] hover:bg-[#8e8e8f] justify-center items-center py-1 px-3 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'jewelry' ? 'bg-[#503030] border-white border-2' : 'bg-[#503030] opacity-50'
+                    className={`flex gap-2 w-[50px] h-[50px] rounded-[8px]  sm:w-[140px] sm:rounded-[36px] sm:h-[50px] hover:bg-[#8e8e8f] justify-center items-center sm:py-3 sm:px-6 text-sm font-[400] text-[#FFF] ${blogDetail.selectedImageType === 'jewelry' ? 'bg-[#503030] border-white border-2' : 'bg-[#503030] opacity-50'
                       }`}
                     onClick={() => handleImageChange(blogDetail.jewelry.url, 'jewelry')}
                   >
 
-                    <div className="w-[22px] relative h-[30px] ">
+                    <div className="w-[20px] relative h-[30px] ">
 
 
 
@@ -243,7 +243,7 @@ function Page({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </>
-      ):(<>
+      ) : (<>
         <div className=" w-full h-[100vh] flex items-center justify-center ">
 
           <Loader />

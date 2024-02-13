@@ -29,7 +29,7 @@ function EncCard( {title,
                          {
                             shortDescription.slice(0,200)
                         }
-                        
+                       
                         </>)
                        }
                        </p>
