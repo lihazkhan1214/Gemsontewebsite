@@ -88,11 +88,9 @@ function Page({ params }: { params: { slug: string } }) {
     }));
   };
 
-  return (<>
-   
-   
+  return (
     <main className="bg-[#FFF]">
-      {blogDetail && (
+      {blogDetail ? (
         <>
           <div className="padding-x">
             <div className="flex flex-col scroll-smooth md:h-[400px]  bg-[#F5F5F5] md:flex-row my-10 justify-center items-center">
@@ -245,10 +243,16 @@ function Page({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </>
-      ) }
-     
+      ) : (<>
+        <div className=" w-full h-[100vh] flex items-center justify-center ">
+
+        
+
+
+        </div>
+
+      </>)}
     </main>
-    </>
   );
 }
 

@@ -1,5 +1,5 @@
 "use client";
-// import type { Metadata, ResolvingMetadata } from 'next'
+
 import React, { useEffect, useState } from 'react';
 import { getSingleArticle } from '@/services/index';
 import Image from 'next/image';
@@ -186,7 +186,7 @@ function BlogArticle({ params }: { params: { slug: string } }) {
       ):(<>
       <div className=" w-full h-[100vh] flex items-center justify-center ">
 
-
+<Loader />
 
 
 </div>
