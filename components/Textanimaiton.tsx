@@ -8,7 +8,7 @@ export const Textanimation = () => {
         // Same substring at the start will only be typed out once, initially
         'Discover the World of  Gemstones',
         4000, // wait 1s before replacing "Mice" with "Hamsters"
-        'Discover the World of Jewelry',
+        'Discover the World of Jewellery',
         4000,
         'Discover the World of Minerals ',
         4000,
