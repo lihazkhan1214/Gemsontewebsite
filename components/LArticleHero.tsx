@@ -38,13 +38,10 @@ function LArticleHero() {
     useEffect(() => {
       
   
-      const storedArticleData = localStorage.getItem('articleData');
-      if (storedArticleData) {
-        dispatch(setDataArticle(JSON.parse(storedArticleData)));
-      } else {
-        fetchArticle();
-      }
-    }, [dispatch]);
+      fetchArticle();
+       
+    
+    }, []);
 
 
 

@@ -17,8 +17,8 @@ function GemAbout() {
           </h1>
 
 
-          <div className="text-black max-sm:break-all text-lg leading-8 self-stretch mt-5  max-md:max-w-full">
-            <p className="text-justify">
+          <div className="text-black  text-lg leading-8 self-stretch mt-5  max-md:max-w-full">
+            <p className="text-justify max-sm:break-all">
               &quot;Embark on a journey through the rarest treasures of the
               Earth with our collection of the most elusive gemstones. Each
               one is a marvel of nature, boasting exquisite colors,
