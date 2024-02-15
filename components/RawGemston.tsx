@@ -31,7 +31,7 @@ export function RawGemston() {
         <Image src="/assets/fimages/rawgem.png" className="absolute  -z-40" alt="Background Image" fill />
 
         <h1 className='global__title text-[#FFF]'>Raw Gemstones</h1>
-        <p className='text-white text-[22px] mt-5 leading-8 md:w-[80%] text-justify'>
+        <p className='text-white text-[22px] mt-5 leading-8 md:w-[80%] max-sm:break-all text-justify'>
           Embark on a global gemstone odyssey, from Sri Lanka&apos;s dazzling sapphires to Colombia&apos;s lush emeralds, exploring the countries with the richest variety of precious stones.
         </p>
 
