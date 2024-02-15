@@ -90,7 +90,7 @@ function SingleAPost({ params }: { params: { slug: string } }) {
             <div className="flex flex-col md:h-[400px]  scroll-smooth bg-[#F5F5F5] md:flex-row my-10 justify-center items-center">
               <div className="flex flex-1 flex-col pl-12 py-16 gap-8">
                 <div className="flex flex-col">
-                  <h2 className="text-[#2C2C2C] text-4xl capitalize font-[700]">{blogDetail.title1212}</h2>
+                  <h2 className="text-[#2C2C2C] text-4xl text-wrap capitalize font-[700]">{blogDetail.title1212}</h2>
                 </div>
                 <div className="flex flex-col">
                   <p className="text-[#000000] font-[400] text-lg w-[300px]">
