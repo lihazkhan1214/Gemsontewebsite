@@ -181,15 +181,15 @@ function SinglePstonecmp({ params }: { params: { slug: string } }) {
                   switch (item.type) {
                     case 'heading-two':
                       return (
-                        <div key={index} className="mb-3 " id={`section-${index}`}>
-                          <h2 className='text-[24px] text-[#000000] font-normal capitalize'>{item.children?.[0]?.text}</h2>
+                        <div key={index} className="mb-2 " id={`section-${index}`}>
+                          <h2 className='text-[24px] text-[#000000] font-semibold capitalize'>{item.children?.[0]?.text}</h2>
 
                           {/* Render other content types accordingly */}
                         </div>
                       );
                     case 'paragraph':
                       return (
-                        <div key={index} className="mb-3 text-lg text-justify font-normal">
+                        <div key={index} className="mb-2 text-lg text-justify break-all font-normal">
                           <p>{item.children?.[0]?.text}</p>
                         </div>
                       );
@@ -226,7 +226,7 @@ function SinglePstonecmp({ params }: { params: { slug: string } }) {
                         return (
                           <li
                             key={index}
-                            className="text-[20px] text-[#000000] font-normal capitalize list-none cursor-pointer hover:text-[#6B03C1]"
+                            className="text-[20px] text-[#000000] font-semibold capitalize list-none cursor-pointer hover:text-[#6B03C1]"
                             onClick={() => {
                               const sectionId = `#section-${index}`;
                               const sectionElement = document.querySelector(sectionId);

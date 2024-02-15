@@ -74,7 +74,7 @@ function EncHero() {
             
             <h1 className="mt-3r">Encyclopedia</h1>
           </div>
-          <p className="text-white text-center text-2xl leading-9 self-stretch mt-20 max-md:max-w-full max-md:mt-10">
+          <p className="text-white  text-center text-2xl leading-9 self-stretch mt-20 max-md:max-w-full max-md:mt-10">
             Varied minerals cut and polished for use in jewelry; these natural
             treasures encompass a spectrum of colors, hardness, and cultural
             significance worldwide.

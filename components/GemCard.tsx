@@ -28,13 +28,13 @@ function GemCard() {
           <h1 className="cardTitle mt-5 text-[#21294D]">
             <span className='capitalize'>{post.title1212}</span> Facts and Information
           </h1>
-          <p className="text-[16px] text-[#717084] font-normal text-justify mt-3 leading-7">
+          <p className="text-[16px] text-[#717084] break-all font-normal text-justify mt-3 leading-7">
             
           {post.shortDescription &&(<>
-            {post.shortDescription.slice(0,200)}..
+            {post.shortDescription.slice(0,130)}
           
           </>)}
-            
+            ...
             </p>
           <Link href={`/articles/${post.slug}`} className='text-[#6B03C1] text-lg mt-3 font-medium flex items-center'>Read more <ChevronRight /> </Link>
         </div>

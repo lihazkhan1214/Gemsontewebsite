@@ -29,13 +29,13 @@ function AllBstoneCard({title,picture,category,birthstones,slug,shortDescription
 
 
                 <div className="bg-[#EDEDED] py-5 px-3 mt-5 ">
-                    <h1 className="cardTitle text-[#000] text-center">{title} - {birthstones}</h1>
+                    <h1 className="cardTitle text-[#000] text-center">{title}-{birthstones}</h1>
 
-                    <p className="text-sm  text-[#111111] font-normal text-center mt-10 leading-7">
+                    <p className="text-sm  text-[#111111] break-all font-normal text-center mt-10 leading-7">
                       {
                         birthDescription && (<>
                         {
-                            birthDescription.slice(0,200)
+                            birthDescription.slice(0,130)
                         }
                         
                         </>)

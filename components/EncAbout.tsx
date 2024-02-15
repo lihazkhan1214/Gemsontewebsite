@@ -68,10 +68,10 @@ function EncAbout() {
                 </button>
                 <h1 className="text-[#000000] mt-5 text-[34px] font-[600] ">{item.title}</h1>
                 <div className="text-[#000000] opacity-75 text-lg leading-8 self-stretch mt-5  max-md:max-w-full">
-                  <p className="text-justify ">{
+                  <p className="text-justify break-all">{
                     item.shortDescription &&(<>
                     
-                    {item.shortDescription.slice(0, 400)}..
+                    {item.shortDescription.slice(0, 130)}..
                     
                     
                     </>)

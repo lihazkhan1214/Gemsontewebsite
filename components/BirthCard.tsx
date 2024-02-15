@@ -35,16 +35,16 @@ function BirthCard({
                 <div className="bg-[#F4F6FF] mt-5 py-5 px-3 ">
                     <h1 className="cardTitle text-[#000]"> {title}- {birthSones}</h1>
 
-                    <p className="text-[14px] text-[#111111] font-normal text-justify tracking-normal mt-3 leading-7">
+                    <p className="text-[14px] break-all text-[#111111] font-normal text-justify tracking-normal mt-3 leading-7">
                     {birthDescription &&(<>
                         {
-                        birthDescription.slice(0,160)
+                        birthDescription.slice(0,130)
                        }
                        ...
                     </>)}
                        
                        
-                        ..
+                       
                         </p>
                 </div>
 

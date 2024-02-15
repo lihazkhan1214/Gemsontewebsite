@@ -37,15 +37,13 @@ function LArticleCard({
         
 
 
-          {title && title.slice(0, 20)
-
-          }
+          {title}
          
         </h1>
 
-        <p className="text-[16px] px-4 text-[#777777] font-normal text-center mt-5 leading-7">
+        <p className="text-[16px] px-4 break-all text-[#777777] font-normal text-center mt-5 leading-7">
           {shortDescription && shortDescription.slice ? (
-            shortDescription.slice(0, 84)
+            shortDescription.slice(0, 130)
           ) : (
             shortDescription
           )}
