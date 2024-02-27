@@ -23,7 +23,7 @@ function EncCard( {title,
                 <div className="bg-[#F4F6FF] py-5 px-3 mt-5 ">
                     <h1 className="cardTitle text-[#000]">{title}</h1>
 
-                    <p className="text-[14px]  text-[#111111] font-normal text-justify mt-5 leading-7 break-all">{shortDescription && (<>{shortDescription.slice(0,130)}...</>)}</p>
+                    <p className="text-[14px]  text-[#111111] font-normal text-justify mt-5 leading-7 ">{shortDescription && (<>{shortDescription.slice(0,130)}...</>)}</p>
 
                 </div>
 

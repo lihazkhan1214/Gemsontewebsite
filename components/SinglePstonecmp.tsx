@@ -189,7 +189,7 @@ function SinglePstonecmp({ params }: { params: { slug: string } }) {
                       );
                     case 'paragraph':
                       return (
-                        <div key={index} className="mb-2 text-lg text-justify break-all font-normal">
+                        <div key={index} className="mb-2 text-lg text-justify  font-normal">
                           <p>{item.children?.[0]?.text}</p>
                         </div>
                       );

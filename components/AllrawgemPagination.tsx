@@ -74,7 +74,7 @@ function AllrawgemPagination() {
           title={item.title}
           slug={item.slug}
           category={item.category}
-          
+            
           
           />
         ))}

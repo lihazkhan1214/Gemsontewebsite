@@ -26,9 +26,9 @@ function GemCard() {
             
           </div>
           <h1 className="cardTitle mt-5 text-[#21294D]">
-            <span className='capitalize'>{post.title1212}</span> Facts and Information
+            <span className='capitalize'>{post.title1212}</span> 
           </h1>
-          <p className="text-[16px] text-[#717084] break-all font-normal text-justify mt-3 leading-7">
+          <p className="text-[16px] text-[#717084]  font-normal text-justify mt-3 leading-7">
             
           {post.shortDescription &&(<>
             {post.shortDescription.slice(0,130)}

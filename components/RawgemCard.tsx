@@ -21,7 +21,7 @@ export function Rawgemcard({
             <h1 className="text-slate-600 global__title">
               {title}
             </h1>
-            <p className="text-slate-600 text-justify text-lg break-all leading-7 mt-5 max-md:max-w-full max-md:mt-10">
+            <p className="text-slate-600 text-justify text-lg  leading-7 mt-5 max-md:max-w-full max-md:mt-10">
 
 
               {shortDescription && (<>

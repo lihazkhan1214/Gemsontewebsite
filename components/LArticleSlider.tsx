@@ -22,6 +22,7 @@ function LArticleSlider() {
     const postData = useSelector((state: RootState) => state.articleData.data) as ArticleData[];
 
 
+    console.log("postData one one one",postData)
 
 
     const SampleNextArrow: React.FC<SampleArrowProps> = ({
